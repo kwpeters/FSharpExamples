@@ -1,4 +1,4 @@
-module Tests
+module DiscriminatedUnionTests
 
 open System
 open Xunit
