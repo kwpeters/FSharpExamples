@@ -5,6 +5,7 @@
     <GenerateProgramFile>false</GenerateProgramFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Entity.fs" />
     <Compile Include="Option.fs" />
     <Compile Include="DiscriminatedUnion.fs" />
     <Compile Include="Record.fs" />
