@@ -2,6 +2,8 @@ module OptionTests
 
 open System
 open Xunit
+open Swensen.Unquote
+
 
 //------------------------------------------------------------------------------
 
@@ -20,12 +22,13 @@ let ``A basic option example`` () =
           LastName = "Flintstone" }
 
     let { MiddleName = middleName } = fred
-    Assert.True(middleName.IsNone)
+    test <@ middleName.IsNone @>
+
 
     let middleName' =
         match middleName with
         | Some middleName -> middleName
         | None -> "<no middle name>"
 
-    Assert.Equal("<no middle name>", middleName')
+    test <@ middleName' = "<no middle name>" @>
 

@@ -3,6 +3,8 @@ module RecordTests
 open System
 open Xunit
 
+open Swensen.Unquote
+
 //------------------------------------------------------------------------------
 
 
@@ -22,7 +24,7 @@ let ``A basic record type example`` () =
 
     // Deconstructing
     let { FirstName = firstName } = fred
-    Assert.Equal("Fred", firstName)
+    test <@ firstName = "Fred" @>
 
 
 //------------------------------------------------------------------------------
@@ -35,6 +37,6 @@ let ``Copying records`` () =
           LastName = "Flintstone" }
 
     let person2 = {person1 with MiddleName = None}
-    Assert.Equal("Fred", person2.FirstName)
-    Assert.Equal(None, person2.MiddleName)
-    Assert.Equal("Flintstone", person2.LastName)
+    test <@ person2.FirstName = "Fred" @>
+    test <@ person2.MiddleName = None @>
+    test <@ person2.LastName = "Flintstone" @>

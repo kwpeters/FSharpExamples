@@ -2,6 +2,7 @@ module DiscriminatedUnionTests
 
 open System
 open Xunit
+open Swensen.Unquote
 
 //------------------------------------------------------------------------------
 
@@ -22,7 +23,7 @@ let ``Discriminated union can be used like an enumeration`` () =
         | Fuji -> "Fuji"
 
     let myApple = GoldenDelicious
-    Assert.Equal("Golden Delicious", (appleTypeToStr myApple))
+    test <@ (appleTypeToStr myApple) = "Golden Delicious" @>
 
 
 //------------------------------------------------------------------------------
@@ -38,7 +39,7 @@ let ``Discriminated union as a simple type wrapper`` () =
 
     // Deconstructing
     let (ProductCode primitiveStr) = aProductCode
-    Assert.Equal("abc", primitiveStr)
+    test <@ primitiveStr = "abc" @>
 
 
 //------------------------------------------------------------------------------
@@ -51,7 +52,7 @@ let ``Unwrapping a discriminated union value in a parameter`` () =
         innerProductCodeStr
 
     let aProductCode = ProductCode "abc"
-    Assert.Equal("abc", (unwrapProductCode aProductCode))
+    test <@ (unwrapProductCode aProductCode) = "abc" @>
 
 
 //------------------------------------------------------------------------------
@@ -79,8 +80,8 @@ let ``A discriminated union with associated data`` () =
         | Circle radius -> 3.14159 * radius * radius
 
     let aShape = Rectangle(3.0, 4.0)
-    Assert.Equal("rectangle", (shapeToName aShape))
-    Assert.Equal(12.0, (shapeArea aShape))
+    test <@ (shapeToName aShape) = "rectangle" @>
+    test <@ (shapeArea aShape) = 12.0 @>
 
 
 //------------------------------------------------------------------------------
@@ -103,12 +104,11 @@ module UnitQuantity =
 [<Fact>]
 let ``A discriminated union with a smart constructor`` () =
     let unitQtyResult1 = UnitQuantity.create -1
-    let expected1 = Error "UnitQuantity can not be negative"
-    Assert.Equal(expected1, unitQtyResult1)
+    test <@ unitQtyResult1 = Error "UnitQuantity can not be negative" @>
 
     let unitQtyResult2 = UnitQuantity.create 22
     match unitQtyResult2 with
-    | Ok (UnitQuantity qty) -> Assert.Equal(22, qty)
+    | Ok (UnitQuantity qty) -> test <@ qty = 22 @>
     | Error _ -> Assert.True(false)
 
 
@@ -136,10 +136,10 @@ module WidgetProductCode =
 let ``A discriminated union with a regex smart constructor`` () =
     let wpc1Result = WidgetProductCode.create "W123"
     match wpc1Result with
-    | Ok theProductCode -> Assert.Equal("W123", (WidgetProductCode.value theProductCode))
+    | Ok theProductCode -> test <@ (WidgetProductCode.value theProductCode) = "W123" @>
     | Error _ -> Assert.True(false)
 
     let wpc2Result = WidgetProductCode.create "X123"
     match wpc2Result with
     | Ok _ -> Assert.True(false)
-    | Error errMsg -> Assert.Equal("X123 is not a valid WidgetProductCode.", errMsg)
+    | Error errMsg -> test <@ errMsg = "X123 is not a valid WidgetProductCode." @>

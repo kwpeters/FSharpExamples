@@ -2,6 +2,8 @@ module EntityTests
 
 open System
 open Xunit
+open Swensen.Unquote
+
 
 //------------------------------------------------------------------------------
 
@@ -34,7 +36,7 @@ let ``Entity equality`` () =
     //     printfn "Cannot compare the entities directly."
 
     // The ID fields must be compared explicitly.
-    Assert.NotEqual(contact1.ContactId, contact2.ContactId)
+    test <@ contact2.ContactId <> contact1.ContactId @>
 
 
 //------------------------------------------------------------------------------
@@ -62,5 +64,4 @@ let ``Entity identity - multiple fields`` () =
           ContactId2 = "bar"
           PhoneNumber = PhoneNumber "456" }
 
-    Assert.Equal(contact1.Key, contact2.Key)
-
+    test <@ contact1.Key = contact2.Key @>
