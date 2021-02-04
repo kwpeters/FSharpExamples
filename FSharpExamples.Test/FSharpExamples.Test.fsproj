@@ -9,6 +9,7 @@
     <Compile Include="Option.fs" />
     <Compile Include="DiscriminatedUnion.fs" />
     <Compile Include="Record.fs" />
+    <Compile Include="LibTests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
@@ -17,5 +18,8 @@
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FSharpLib\FsharpLib.fsproj" />
   </ItemGroup>
 </Project>

@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpExamples.Test", "FSharpExamples.Test\FSharpExamples.Test.fsproj", "{662BBFB6-353C-4E83-9981-ABD821F32A1D}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsharpLib", "FSharpLib\FsharpLib.fsproj", "{EE319FBE-D55F-44A5-AC39-717FE8225B33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{662BBFB6-353C-4E83-9981-ABD821F32A1D}.Release|x64.Build.0 = Release|Any CPU
 		{662BBFB6-353C-4E83-9981-ABD821F32A1D}.Release|x86.ActiveCfg = Release|Any CPU
 		{662BBFB6-353C-4E83-9981-ABD821F32A1D}.Release|x86.Build.0 = Release|Any CPU
+		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Debug|x64.Build.0 = Debug|Any CPU
+		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Debug|x86.Build.0 = Debug|Any CPU
+		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Release|x64.ActiveCfg = Release|Any CPU
+		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Release|x64.Build.0 = Release|Any CPU
+		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Release|x86.ActiveCfg = Release|Any CPU
+		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
