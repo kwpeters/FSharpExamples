@@ -7,6 +7,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpExamples.Test", "FSha
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsharpLib", "FSharpLib\FsharpLib.fsproj", "{EE319FBE-D55F-44A5-AC39-717FE8225B33}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "part6", "part6\part6.fsproj", "{401829F1-0875-40EE-87FD-87333C124767}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Release|x64.Build.0 = Release|Any CPU
 		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Release|x86.ActiveCfg = Release|Any CPU
 		{EE319FBE-D55F-44A5-AC39-717FE8225B33}.Release|x86.Build.0 = Release|Any CPU
+		{401829F1-0875-40EE-87FD-87333C124767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401829F1-0875-40EE-87FD-87333C124767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401829F1-0875-40EE-87FD-87333C124767}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{401829F1-0875-40EE-87FD-87333C124767}.Debug|x64.Build.0 = Debug|Any CPU
+		{401829F1-0875-40EE-87FD-87333C124767}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{401829F1-0875-40EE-87FD-87333C124767}.Debug|x86.Build.0 = Debug|Any CPU
+		{401829F1-0875-40EE-87FD-87333C124767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401829F1-0875-40EE-87FD-87333C124767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{401829F1-0875-40EE-87FD-87333C124767}.Release|x64.ActiveCfg = Release|Any CPU
+		{401829F1-0875-40EE-87FD-87333C124767}.Release|x64.Build.0 = Release|Any CPU
+		{401829F1-0875-40EE-87FD-87333C124767}.Release|x86.ActiveCfg = Release|Any CPU
+		{401829F1-0875-40EE-87FD-87333C124767}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
